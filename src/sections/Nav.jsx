@@ -10,7 +10,7 @@ const Nav = () => {
     const [color, setColor] = useState(false)
   
   const changeBackground = () => {
-  if( window.scrollY >= 100 ){
+  if( window.scrollY >= 200 ){
     setColor(true)
   }else{
     setColor(false)
@@ -25,7 +25,7 @@ const handleClick = () => setClick(!click)
 
   return (
     <header  >
-      <nav className={ ` ${ color ? 'bg-white shadow-xl ring-1 ring-slate-500/5  w-full' : 'bg-[#F1F5FF]'} fixed top-0 left-0 right-0 w-full px-10 py-5 z-10 md:px-[6rem] flex justify-between items-center max-container`}>
+      <nav className={ ` ${ color ? 'bg-white  shadow-xl ring-1 ring-slate-500/5  w-full transition-all' : 'bg-[#F1F5FF] transition-shadow'} fixed top-0 left-0 right-0 w-full px-10 py-5 z-10 md:px-[6rem] flex justify-between items-center max-container`}>
      <div className="font-bold lg:text-lg cursor-pointer"> MY<span className="text-blue-500 ml-1">REACT</span></div>
 
       <ul className="flex flex-1 justify-left items-center gap-10 max-lg:hidden px-7 text-sm w-full">
@@ -57,7 +57,7 @@ const handleClick = () => setClick(!click)
 
 <div className='flex flex-col justify-center items-center mt-8 md:mt-10 md:text-md '>
 
-    <ul className='flex flex-col justify-left w-full px-10 max-sm:px-7 md:px-[6rem]'>
+    <ul className='flex flex-col justify-left w-full px-10 max-sm:px-7 md:px-[6rem] '>
 
       {navLinks.map((item) => (
         <li key={item.label} className='py-5'>
